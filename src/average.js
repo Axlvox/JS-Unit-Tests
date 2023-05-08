@@ -11,6 +11,44 @@
     - average([1, '2']) // Retorno: undefined;
 */
 
-const average = () => {};
-.
+const average = (a) => {
+  let soma = 0;
+  for (let i = 0; i < a.length; i++) {
+    soma += a[i];
+    }
+  if (typeof soma !== 'number') {
+    return undefined;
+} if (a.length === 0) {
+  return undefined;
+}
+
+let media = Math.round(soma / a.length);
+  return media;
+};
+
+console.log(Math.round(average([1, 2])));
+console.log(Math.round(average([1, 2, 3, 4, 5])));
+console.log(Math.round(average([1, 2, '3'])));
+console.log(Math.round(average([])));
+
 module.exports = average;
+
+// const average = (a) => {
+//   if (a === null) {
+//   return undefined;
+// }
+//   let soma = 0;
+//   for (let i = 0; i < a.length; i++) {
+//     if (typeof a[i] !== "number") {
+//       return undefined;
+//     }
+//     soma += a[i];
+// }
+// let media = soma / a.length
+//   return media;
+// };
+
+// console.log(Math.round(average([1, 2])));
+// console.log(Math.round(average([1, 2, 3, 4, 5])));
+// console.log(Math.round(average([1, 2, '3'])));
+// console.log(Math.round(average([])));
