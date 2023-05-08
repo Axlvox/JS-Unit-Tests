@@ -13,7 +13,7 @@
 
 const average = (a) => {
   let soma = 0;
-  for (let i = 0; i < a.length; i++) {
+  for (let i = 0; i < a.length; i += 1) {
     soma += a[i];
     }
   if (typeof soma !== 'number') {
